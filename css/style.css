@@ -40,11 +40,6 @@ body{
     padding:auto;
     background-color:#051242;
 } 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
 #logo{
     float:left;
 }
