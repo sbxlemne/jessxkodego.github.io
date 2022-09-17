@@ -10,7 +10,7 @@ owl.owlCarousel({
 
 window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("navbar");
+var navbar = document.getElementById("navigation");
 var sticky = navbar.offsetTop;
 
 function myFunction() {
