@@ -150,8 +150,31 @@
 
 
     </div>
+    
 </div>
-
+    <!--------------Shopping Cart Modal-------------->
+    <div class="productsCart-container hide " id="productsCartContID">
+        <div class="producstOnCart">
+            <div class="top">
+                <h3 class="titleModal">Cart</h3>
+                <p>Total Items: <span></span></p>
+                <span class="close" id="closeButton" >X</span>
+            </div>
+            <ul id="buyItems">
+                <h4 class="empty">Your shopping cart is empty</h4>
+                <!-- <li class="buyItem">
+                </li> -->
+            </ul>
+            <div class="footerModal">
+                <div id="totalPrices">
+                    
+                </div>
+                    <form action="">
+                        <button formaction="checkout.html" class="btn modal checkout hidden">Checkout!</button>
+                    </form>   
+            </div>
+        </div>
+    </div>
     
 <div id="footer-container">
 
@@ -215,6 +238,19 @@ owl.owlCarousel({
     autoplayTimeout:1000,
     autoplayHoverPause:true
 });
+
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navigation");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
     </script>
 </body>
 </html>
