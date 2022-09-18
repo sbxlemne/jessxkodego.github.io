@@ -84,6 +84,11 @@ const deliveryCity = document.querySelector(".city");
 const deliveryCountry  = document.querySelector(".country");
 const zip_code = document.querySelector(".zip_code");
 const inputTelNum = document.querySelector(".inputTel");
+const CreditCardType = document.querySelector(".CreditCardType");
+const card_number = document.querySelector(".card_number");
+const card_code  = document.querySelector(".card_code");
+const exp_month = document.querySelector(".exp_month");
+const exp_year = document.querySelector(".exp_year");
 
 function lastNameField () {
     if (!lastName.value) {
@@ -93,10 +98,13 @@ function lastNameField () {
 }
 
 function email () {   
-    if (!emailadd.value) {
-        return false;      
-    }
-    return true;
+
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailadd.value))
+        {
+            return true;
+        }
+            alert("You have entered an invalid email address!")
+            return false;
   }
 
 function address () {    
@@ -114,11 +122,14 @@ function address () {
  }
 
  function country () { 
-    if (!deliveryCountry .value) {
-        return false;            
-    }
-    return true;
- }
+
+    if(deliveryCountry.value.match("select country")) {
+        alert(deliveryCountry.value);
+        return false;
+    } else {
+        return true;
+     }
+}
 
  function zipCode () {   
     if (!zip_code.value) {
@@ -128,11 +139,12 @@ function address () {
  } 
 
  function inputTel () {
-    if (!inputTelNum.value) {
-        return false;
-    } else {
+
+    if (/[+][6]{1}[3]{1}[0-9]{10}/.test(inputTelNum.value))
+    {
         return true;
     }
+        return false;
  } 
 
 function firstNameField () {
@@ -143,9 +155,45 @@ function firstNameField () {
       }
   }
 
+function cardNumber () {
+
+    if (/[0-9]{16}/.test(card_number.value)){
+        return true;
+    }   
+        return false;
+} 
+
+function cardCode () {
+
+    if (/[0-9]{3}/.test(card_code.value))
+    {
+        return true;
+    }
+        return false;
+}
+
+function expMonth () {
+
+    if (!exp_month.value) {
+        return false;
+    } else {
+        return true;
+    };
+} 
+    
+function expYear () {
+
+    if (!exp_year.value) {
+        return false;
+    } else {
+        return true;
+    };
+}  
+
+
 submit.addEventListener('click', (e) => {
 if (e.target.classList.contains('btn-submit')) {
-    if (firstNameField() === true && lastNameField() === true && email() === true && address() === true && city() === true && inputTel() === true)  {
+    if (firstNameField() === true && lastNameField() === true && email() === true && address() === true && city() === true && inputTel() && country() && cardNumber() && cardCode() && expMonth() && expYear() === true)  {
         let formData =  {
             firstname: firstName.value,
             lastname: lastName.value,
@@ -159,7 +207,7 @@ if (e.target.classList.contains('btn-submit')) {
         localStorage.setItem('buyerInfo', JSON.stringify(formData));
         localStorage.removeItem('shoppingCart');
         updateShoppingCartHTML();
-        window.open('success.html');
+        window.open('success.html', '_self"');
 
     }
 }
