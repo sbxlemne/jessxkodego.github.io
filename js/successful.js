@@ -3,15 +3,15 @@ let buyerInfo = JSON.parse(localStorage.getItem('buyerInfo')); //for current buy
 
 
 // Menu Dropdown
-let menuItems = document.querySelector('#menuItems');
-menuItems.style.maxHeight = "0px";
-function menutoggle () {
-    if (menuItems.style.maxHeight == "0px"){
-        menuItems.style.maxHeight = "200px";
-    } else {
-        menuItems.style.maxHeight = "0px";
-    }
-}
+// let menuItems = document.querySelector('#menuItems');
+// menuItems.style.maxHeight = "0px";
+// function menutoggle () {
+//     if (menuItems.style.maxHeight == "0px"){
+//         menuItems.style.maxHeight = "200px";
+//     } else {
+//         menuItems.style.maxHeight = "0px";
+//     }
+// }
 
 function getRandomArbitrary(min) {
     return Math.floor(Math.random() * min);
@@ -26,8 +26,8 @@ const countTheSumPrice = () => { // 4
 }
 
 const receipt = document.querySelector('.row2');
-console.log(buyerInfo);
-console.log(productsCheckOut);
+// console.log(buyerInfo);
+// console.log(productsCheckOut);
 
 
 receipt.innerHTML = `<p>Receipt Number:` + getRandomArbitrary(100) + `</p>`
@@ -47,6 +47,9 @@ for (let i = 0; i < productsCheckOut.length; i++) {
                 </tr>`;
     receipt2.innerHTML += result; 
 } 
+
+alert(receipt);
+alert(receipt2);
 
 
 

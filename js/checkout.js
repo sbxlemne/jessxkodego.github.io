@@ -10,15 +10,27 @@ let buyerInfo = JSON.parse(localStorage.getItem('buyerInfo')) || []; //for curre
 const createCartHistory = document.querySelector('.createCartHistory');
 
 // Menu Dropdown
-let menuItems = document.querySelector('#menuItems');
-menuItems.style.maxHeight = "0px";
-function menutoggle () {
-    if (menuItems.style.maxHeight == "0px"){
-        menuItems.style.maxHeight = "200px";
-    } else {
-        menuItems.style.maxHeight = "0px";
-    }
-}
+// let menuItems = document.querySelector('#menuItems');
+// menuItems.style.maxHeight = "0px";
+// function menutoggle () {
+//     if (menuItems.style.maxHeight == "0px"){
+//         menuItems.style.maxHeight = "200px";
+//     } else {
+//         menuItems.style.maxHeight = "0px";
+//     }
+// }
+
+
+const cardYear = document.querySelector('.exp_year');
+for (let i = 1; i < 30; i++) {
+    const element = cardYear[i];
+    let today = new Date();
+    let yyyy  = today.getFullYear();
+    let year = yyyy + i;
+    element.textContent = year; 
+}  
+
+
 
 // const cartSumPrice = document.querySelector('#sum-prices');
 //Sum of 
@@ -72,10 +84,12 @@ const updateShoppingCartHTML = function () {
 	}
 }
 
-menutoggle ();
+// menutoggle ();
 updateShoppingCartHTML();
 
+
 const submit = document.querySelector("#fromValidate");
+const cancel = document.querySelector(".cancel");
 const firstName = document.querySelector(".first_name");
 const lastName = document.querySelector(".last_name");
 const emailadd = document.querySelector(".email");
@@ -187,13 +201,13 @@ function expYear () {
         return false;
     } else {
         return true;
+       
     };
 }  
 
-
 submit.addEventListener('click', (e) => {
 if (e.target.classList.contains('btn-submit')) {
-    if (firstNameField() === true && lastNameField() === true && email() === true && address() === true && city() === true && inputTel() && country() && cardNumber() && cardCode() && expMonth() && expYear() === true)  {
+    if (firstNameField() === true && lastNameField() === true && email() === true && address() === true && city() === true && inputTel() && country() && cardNumber() && cardCode() && expMonth() && expYear ()=== true)  {
         let formData =  {
             firstname: firstName.value,
             lastname: lastName.value,
@@ -206,13 +220,18 @@ if (e.target.classList.contains('btn-submit')) {
         } 
         localStorage.setItem('buyerInfo', JSON.stringify(formData));
         localStorage.removeItem('shoppingCart');
-        updateShoppingCartHTML();
-        window.open('success.html', '_self"');
+        alert('hahay');
+        window.open('success.html');
 
     }
 }
 });
 
-
-
+// const cancel = document.querySelector(".cancel");
+submit.addEventListener('click', (e) => {
+    if (e.target.classList.contains('cancel')) {
+            localStorage.removeItem('shoppingCart');
+            updateShoppingCartHTML();
+        }
+    }); 
 
