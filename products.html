@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Switch Eye | Provide All Kind Of Tech Solutions</title>
+        <link rel="icon" type="image/x-icon" href="img/favico.png">
+        <link rel="stylesheet" href="css/products.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" integrity="sha512-csw0Ma4oXCAgd/d4nTcpoEoz4nYvvnk21a8VA2h2dzhPAvjbUIK6V3si7/g/HehwdunqqW18RwCJKpD7rL67Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover.css" integrity="sha512-Qg72y9f1a3aVc1FVnjq5YURLOOG8fDKQjMnhxYaZgBz4nIVjpVOBUtuMMMqkZPS1FlVrzzEBXq2sM6Qp1zen/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    </head>
+    <body>
+    
+        <div id="maincontainer">
+            <div id="navigation">
+                <div id="logo">
+                <a href="#"><img src="images/logo.png" width=""/></a>
+                </div>
+                <div id="nav-links">
+                    <ul>
+                        <li><a href="/index.html" class="hvr-underline-from-center"> Home</a></li>
+                        <li><a href="/index.html" class="hvr-underline-from-center"> About Us</a></li>
+                        <li><a href="/index.html" class="hvr-underline-from-center"> Services</a></li>
+                        <li><a href="/products.html" class="hvr-underline-from-center"> Shop</a></li>
+                        <li><a href="/index.html" class="hvr-underline-from-center"> Contact Us</a></li>
+                        <div class="cart">
+                            <img src="img/cart.png" alt="cart" width="30px" height="30px">
+                            <p class="countitem"></p>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div id="slider">
+                <h1 class="animate__animated animate__fadeInDown">Make Real-Life Connections With IT Experts</h1>
+                <p class="animate__animated animate__fadeInLeft animate__delay-1s"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida incididunt ut. </p>
+            </div>
+        </div>
+<!-- Featured Products -->
+        <div class="small-container">
+            <div class="row row-2">
+                <h2>All Products</h2>
+                <select name="" id="">
+                    <option value="">Default Sorting</option>
+                    <option value="">Sort by Price</option>
+                    <option value="">Sort by Popularity</option>
+                    <option value="">Sort by Rating</option>
+                    <option value="">Sort by Sale</option>
+                </select>
+            </div>
+            
+            <div class="row hikProducts list" id="list">
+            <!-- <div class="col-4">
+                    <img src="images/product-1.jpg" alt="">
+                    <h4>Red Printed Tshirt</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <p>$50.00</p>
+                </div> --> 
+                
+            </div>
+            <div class="page-btn pagenumbers" id="pagination">
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>&#8594;</span>
+            </div>
+        </div>
+
+        <!--------------Shopping Cart-------------->
+        <div class="productsCart-container hide " id="productsCartContID">
+            <div class="producstOnCart">
+                <div class="top">
+                    <h3 class="titleModal">Cart</h3>
+                    <p>Total Items: <span></span></p>
+                    <span class="close" id="closeButton" >X</span>
+                </div>
+                <ul id="buyItems">
+                    <h4 class="empty">Your shopping cart is empty</h4>
+                    <!-- <li class="buyItem">
+                    </li> -->
+                </ul>
+                <div class="footerModal">
+                    <div id="totalPrices">
+                    
+                    </div>    
+                    <form action="">
+                        <button formaction="checkout.html" class="btn modal checkout hidden">Checkout!</button>
+                    </form> 
+                    
+                </div>
+            </div>
+        </div>
+
+                <!--------------Footer-------------->
+        <div id="footer-container">
+
+            <div class="footer-cont-1">
+            <img src="img/logo.png"/><br/>
+                <div>
+                    At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+                    praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias 
+                    excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui 
+                    officia deserunt mollitia animi, id est laborum et dolorum fuga. 
+                    Et harum quidem rerum.
+                </div>
+            </div> 
+        
+            <div class="footer-cont-2">
+                <h3>Quick Links</h3>
+                <hr id="line"/>
+            <ul class="footer-links">
+                <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Home</a></li>
+                <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">About Us</a></li>
+                <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Services</a></li>
+                <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Shop</a></li>
+                <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Contact Us</a></li>
+            </ul>
+        
+            </div>
+            <div class="footer-cont-3">
+
+                <h3>Services </h3>
+                <hr>
+                <ul class="footer-links">
+                    <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Hikvision</a></li>
+                    <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Cisco</a></li>
+                    <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Network Services</a></li>
+                    <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Security</a></li>
+                    <li> <i class="fa-solid fa-star"></i> <a href="#" class="hvr-forward">Sample</a></li>
+                </ul>
+            </div>
+            <div class="footer-cont-4">
+
+            <h3>Contact Us</h3>
+            <hr>
+            
+            </div> 
+            </div>
+
+        <script src="js/products.js"></script>
+        <script src="js/cart.js"></script>
+        <!-- <script src="js/pagination.js"></script> -->
+
+</body>
+</html> 
