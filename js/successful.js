@@ -30,7 +30,7 @@ const receipt = document.querySelector('.row2');
 // console.log(productsCheckOut);
 
 
-receipt.innerHTML = `<p>Receipt Number:` + getRandomArbitrary(100) + `</p>`
+receipt.innerHTML = `<p>Receipt Number:` + localStorage.key(0) + `</p>`
             + `<p>Total Amount Paid: &#8369;    ${countTheSumPrice()}`
             + `<p>Paid by: ${buyerInfo.firstname} ${buyerInfo.lastname}</p>`
             + `<p>For the Payment of:</p>`;
